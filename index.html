@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#000000">
   </head>
   <body>
     <div id="unity-container">
@@ -88,6 +90,19 @@
       enterVRButton.addEventListener('click', function (event) {
         unityInstance.Module.WebXR.toggleVR();
       }, false);
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./service-worker.js")
+                  .then(function (registration) {
+                    console.log("Service Worker registered with scope:", registration.scope);
+                  })
+                  .catch(function (error) {
+                    console.error("Service Worker registration failed:", error);
+                  });
+        });
+      }
     </script>
   </body>
 </html>
