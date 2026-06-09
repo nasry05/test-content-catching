@@ -1,4 +1,4 @@
-const CACHE_NAME = "test-content-catching-v4";
+const CACHE_NAME = "test-content-catching-v5";
 
 const CORE_FILES = [
     "./",
