@@ -1,0 +1,11 @@
+body { padding: 0; margin: 0; background: #231F20 }
+#app-container { position: absolute; width: 100%; height: 100% }
+#app-canvas-container { width: 100%; height: 100% }
+#app-canvas { display: block; width: 100%; height: 100%; background: #231F20 }
+#app-loading { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#app-progress-empty { width: 200px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.2); overflow: hidden }
+#app-progress-full { width: 0%; height: 100%; background: #ffffff; transition: width 0.2s ease-out }
+#app-footer { position: fixed; right: 0; bottom: 0; padding: 0 10px 10px 0 }
+#entervr, #enterar { width: 38px; height: 38px; margin-left: 6px; border: 0; display: inline-block }
+#entervr:enabled, #enterar:enabled { background-color: #1eaed3; cursor: pointer }
+#entervr:disabled, #enterar:disabled { background-color: #dddddd }
